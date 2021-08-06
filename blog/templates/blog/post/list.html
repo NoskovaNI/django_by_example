@@ -12,8 +12,8 @@
     </h2>
     <p class="date">
     Published {{ post.publish }} by {{ post.author }}
-    ss {{ post.slug }}sss
     </p>
     {{ post.body|truncatewords:30|linebreaks }}
 {% endfor %}
+    {% include "pagination.html" with page=page_obj %}
 {% endblock %}
