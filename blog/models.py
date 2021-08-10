@@ -2,6 +2,7 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 from django.urls import reverse
+from taggit.managers import TaggableManager
 
 # This includes the data models of the application; all Django
 # applications need to have a models.py file, but this file can be left empty.
@@ -31,7 +32,7 @@ class Post(models.Model):
     status = models.CharField(max_length=10,
                               choices=STATUS_CHOICES,
                               default='draft')
-    object = models.Manager()  # the default manager
+    objects = models.Manager()  # the default manager
     published = PublishedManager()  # custom manager
 
     class Meta:
@@ -46,6 +47,7 @@ class Post(models.Model):
                              self.publish.month,
                              self.publish.day,
                              self.slug])
+    tags = TaggableManager()
 
 
 class Comment(models.Model):
