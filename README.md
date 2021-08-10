@@ -17,6 +17,8 @@
 - [ ] Chapter 10: Building an e-Learning Platform
 - [ ] Chapter 11: Caching Content
 - [ ] Chapter 12: Building an API
+- [ ] Chapter 13: Builing a Chat Server
+- [ ] Chapter 14: Going Live
 
 
 ## Requirements
